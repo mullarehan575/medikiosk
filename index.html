@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MediKiosk</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <!-- Header -->
+
+        <header>
+
+            <div class="logo-area">
+
+                <div class="logo">
+
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+                <h2>medikiosk</h2>
+
+            </div>
+
+
+            <nav>
+
+                <button onclick="showPage('home')" class="active">
+
+                    <span class="home-icon"></span>
+
+                    Home
+
+                </button>
+
+
+                <button onclick="showPage('about')">
+
+                    <span class="info-icon">i</span>
+
+                    About
+
+                </button>
+
+
+                <button onclick="showPage('contact')">
+
+                    <span class="phone-icon"></span>
+
+                    Contact Us
+
+                </button>
+
+            </nav>
+
+        </header>
+
+
+
+        <!-- Home -->
+
+        <section id="home" class="page home-page">
+
+
+            <div class="voice">
+
+                <button id="mic" onclick="startListening()">
+
+                    <span class="mic-icon">
+
+                        <span class="mic-body"></span>
+
+                        <span class="mic-line"></span>
+
+                    </span>
+
+                </button>
+
+
+                <h1 id="title">
+                    Tap to Speak
+                </h1>
+
+
+                <p id="status">
+                    Ask your health related question
+                </p>
+
+            </div>
+
+
+
+            <!-- Question Area -->
+
+            <div class="question-area">
+
+
+                <div class="question-box">
+
+                    <span class="message-icon"></span>
+
+
+                    <input
+                        type="text"
+                        id="question"
+                        placeholder="Type your question here..."
+                    >
+
+
+                    <button
+                        class="send-button"
+                        onclick="sendQuestion()">
+
+                        <span class="send-icon"></span>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Upload Button -->
+
+                <button
+                    class="upload-button"
+                    onclick="uploadFile()">
+
+                    <span class="upload-icon"></span>
+
+                    Upload
+
+                </button>
+
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    hidden
+                >
+
+            </div>
+
+
+
+            <!-- Answer -->
+
+            <div id="answer"></div>
+
+
+
+            <p class="note">
+
+                MediKiosk provides general health information.
+                Please consult a doctor for professional medical advice.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- About -->
+
+        <section id="about" class="page hidden">
+
+
+            <div class="card">
+
+                <h1>About MediKiosk</h1>
+
+
+                <p>
+
+                    MediKiosk is a health assistance platform
+                    designed to help users ask health-related
+                    questions using text, voice and uploaded
+                    documents.
+
+                </p>
+
+
+                <div class="features">
+
+
+                    <div>
+
+                        <span class="feature-icon microphone-small"></span>
+
+                        <h3>Voice</h3>
+
+                        <p>
+                            Ask questions using your microphone.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="feature-icon keyboard-small"></span>
+
+                        <h3>Text</h3>
+
+                        <p>
+                            Type your health-related questions.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="feature-icon upload-small"></span>
+
+                        <h3>Upload</h3>
+
+                        <p>
+                            Upload a file for further assistance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Contact -->
+
+        <section id="contact" class="page hidden">
+
+
+            <div class="card">
+
+                <h1>Contact Us</h1>
+
+
+                <p>
+
+                    If you have any questions or suggestions,
+                    you can contact the MediKiosk team.
+
+                </p>
+
+
+                <p>
+                    Email: hello@medikiosk.com
+                </p>
+
+
+                <p>
+                    Phone: +91 00000 00000
+                </p>
+
+
+                <p>
+                    Location: India
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Footer -->
+
+        <footer>
+
+            <p>
+                © 2026 MediKiosk. All rights reserved.
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
